@@ -17,14 +17,22 @@ var minorsDiscount = (ticketPrice * 20) / 100;
 // console.log(minorsDiscount);
 // va applicato uno sconto del 40% per gli over 65.
 var overDiscount = (ticketPrice * 40) /100;
+
+var minorFinalPrice = ticketPrice - minorsDiscount;
+
+var overFinalPrice = ticketPrice - overDiscount;
+
+var accuracyMinor = minorFinalPrice.toFixed(2);
+var accuracyOver = overFinalPrice.toFixed(2);
+var accuracyNormal = ticketPrice.toFixed(2);
 // console.log(overDiscount);
 // var currency = €;
 
 if (passengerAge < minorAge) {
-  document.getElementById('showPrice').innerHTML = ticketPrice - minorsDiscount;
+  document.getElementById('showPrice').innerHTML = accuracyMinor;
 } else if (passengerAge > overAge) {
-  document.getElementById('showPrice').innerHTML = ticketPrice - overDiscount  ;
+  document.getElementById('showPrice').innerHTML = accuracyOver;
 }
 else {
-  document.getElementById('showPrice').innerHTML = ticketPrice;
+  document.getElementById('showPrice').innerHTML = accuracyNormal;
 }

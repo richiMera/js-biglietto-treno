@@ -13,6 +13,17 @@ header {
   padding: 0 60px;
 }
 
+/* .header_left {
+  width: 20%;
+}
+.header_mid {
+  text-align: center;
+  width: 50%;
+}
+.header_right {
+  text-align: right;
+  width: 30%;
+} */
 .header_list {
   list-style: none;
 }
